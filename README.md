@@ -24,7 +24,7 @@ Line Feed 줄바꿈
 하이퍼링크
 
     <https://www.naver.com>
-    이렇게 [링크(www.naver.com) 이름에 링크를 걸 수 있다. 
+    이렇게 [링크](www.naver.com) 이름에 링크를 걸 수 있다. 
 
 
 
