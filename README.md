@@ -1,3 +1,40 @@
+Header 헤더 
+        # 제목1
+        ## 제목2
+        ### 제목3
+        #### 제목4
+        ##### 제목5
+        ####### 제목6
+Line Feed 줄바꿈
+        엔터2번
+
+인덱싱(순서)
+    1. 2.    3.    , 들여쓰기하면 안됨
+
+구분선 추가법
+    ---
+
+    ----
+
+코드블럭
+
+    private String email;
+    private String number;
+
+하이퍼링크
+
+    <https://www.naver.com>
+    이렇게 [링크(www.naver.com) 이름에 링크를 걸 수 있다. 
+
+
+
+
+
+
+
+# HTML
+
+
 HTML //HyperText Markup Language , 웹문서를 만드는 언어
 
 하이퍼텍스트 //HyperText, 문서를 서로 연결해 주는 링크
