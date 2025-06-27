@@ -1,24 +1,24 @@
 <!--
-2_목록관련태그
+3_표관련태그
 
 1수업시간 작성 20250623
-2
-3
+2책 코드 추가 20250627
+3코드 정리 20250627
+4rowspan,colgrouptest 20250627
 
 
+참고
+kd 수업
+HTML+CSS+자바스크립트 웹 표준의 정석
 
-
-JeongHoon 2025063
+JeongHoon 20250623
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기본적인 표 만들기</title>
-
-
-
+    <title>표관련태그</title>
 
     <!-- 여기서 색상을 지정한다. -->
     <style>
@@ -33,143 +33,278 @@ JeongHoon 2025063
         }
     </style>
 
-
 </head>
 <body>
-    <h1>기본적인 표 만들기
-    </h1>
-    <table border="1">
-        <!--1픽셀만큼 솔리드 블랙-->
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                3
-            </td>
-        </tr>
-        <tr>
-            <td>
-                4
-            </td>
-            <td>
-                5
-            </td>
-            <td>
-                6
-            </td>
-        </tr>
-    <tr>
-            <td>
-                7
-            </td>
-            <td>
-                8
-            </td>
-            <td>
-                9
-            </td>
-        </tr>
-    </table>
-    <!-- 
-        <table> <tr> <th> <td>
+    <h1>표관련태그</h1>
+
+            <!-- 
+                <table> <tr> <th> <td>
+                <table> 테이블 태그
+                <caption> 태그 바로 아랫줄에 표의 제목
+                <tr>    표의 행을 나타내는 태그
+                <th>    표의 제목 셀을 나타내는 태그
+                <td>    표의 일반셀
+            -->
+         <h3>Table,1픽셀만큼 솔리드 블랙</h3>
+
+            <table border="1"><!--1픽셀만큼 솔리드 블랙-->
+                <caption>표제목</caption>
+                <tr>    <td>1</td>   <td>2</td>  <td>3</td>  </tr>
+                <tr>    <td>4</td>   <td>5</td>  <td>6</td>  </tr>
+                <tr>    <td>7</td>   <td>8</td>  <td>9</td>  </tr>
+            </table><br><hr><br>
+
+        <h3>Table,3픽셀만큼 솔리드 블랙</h3>
+            <table border="3"><!--3픽셀만큼 솔리드 블랙-->
+                <caption>표제목</caption>
+                <tr>    <td>1</td>   <td>2</td>  <td>3</td>  </tr>
+                <tr>    <td>4</td>   <td>5</td>  <td>6</td>  </tr>
+                <tr>    <td>7</td>   <td>8</td>  <td>9</td>  </tr>
+            </table><br><hr><br>
+
+        <h3>Table,20픽셀만큼 솔리드 블랙</h3>
+            <table border="20"><!--20픽셀만큼 솔리드 블랙-->
+                <caption>표제목</caption>
+                <tr>    <td>1</td>   <td>2</td>  <td>3</td>  </tr>
+                <tr>    <td>4</td>   <td>5</td>  <td>6</td>  </tr>
+                <tr>    <td>7</td>   <td>8</td>  <td>9</td>  </tr>
+            </table><br><hr><br>
+        <!-------------------------------------------------------------->
+        <h3>Table 예시</h3>
+            <table border="1">
+                 <!--table 의 종류-->
+                <caption><b>웹브라우저의 종류</b></caption>
+                <!--1행 제목 table head-->
+                <tr>
+                    <th>브라우저명</th>
+                    <th>제조사    </th>
+                    <th>홈페이지</th>
+                </tr>
+                <!--2행 값 table data-->
+                <tr>
+                    <td>익스플로러</td>
+                    <td>ms</td>
+                    <td>https://www.microsoft.com</td>
+                </tr>
+                <!--3행-->
+                <tr>
+                    <td>크롬</td>
+                    <td>google</td>
+                    <td>https://www.google.com</td>
+                </tr>
+                <!--4행-->
+                <tr>
+                    <td>사파리</td>
+                    <td>애플</td>
+                    <td>https://www.apple.;com</td>
+                </tr>
+            </table>
+            <br><hr><br>
+        <!-------------------------------------------------------------->
+        
+        <!--
+            <td> 속성이용, 행 열 합치기
+                colspan 열합치기
+                rowspan 행합치기
+        -->
+                
+        <h3>표 열,행합치기</h3>
+        <P>테이블의 셀의 크기를 조절할 수 있다.!</P>
+        <!-- 회원정보를 합치기-->
+
+            <table border="1">
+                <!--1행-->
+                <tr>
+                    <td width="130px" height="150px" colspan="2" rowspan="2">사진</td>
+                    <td width="80px">이름</td>
+                    <td width="200px"></td>
+                </tr>
+                <!--2행-->
+                <tr>
+                    <td>연락처</td>
+                    <td></td>
+                </tr>
+                <!--3행-->
+                <tr>
+                    <td width="70px" height="50px">주소</td>
+                    <td colspan="3"></td>
+                </tr>
+                <!--4행-->
+                <tr>
+                    <td height="100px">자기소개</td>
+                    <td colspan="3"></td>
+                </tr>
+            </table><br><hr><br>
+        <!-------------------------------------------------------------->
+        <h2>테이블 태그의 구조 설정</h2>
+        <!--
+        위에 CSS로 지정한 테이블
+            thead   제목
+            tbody   내용
+            tfoot   요약
+        -->
+            <table border="1">
+                <caption>CSS지정한 태그</caption>
+                <thead> <!--thead로 감싸기, 제목행 이면서 1행-->
+                    <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>주소</th>
+                </tr>
+                </thead>
+                <tbody><!--tbody로 감싸기-->
+                    <tr>    <!--제목행 이면서 2행-->
+                        <td>홍길동</td>
+                        <td>20</td>
+                        <td>서울시 서초구</td>
+                    </tr>
+                    <tr>    <!--제목행 이면서 2행-->
+                        <td>김영희</td>
+                        <td>24</td>
+                        <td>서울시 강동구</td>
+                    </tr>
+                    <tr>    <!--제목행 이면서 2행-->
+                        <td>이순신</td>
+                        <td>30</td>
+                        <td>경기도 남양주</td>
+                    </tr>
+                </tbody>
+                <tfoot><!--tfoot로 감싸기-->
+                    <tr><!-- 마지막행에서 첫번째 두번째 셀을 합하기-->
+                        <td colspan="2">총인원</td>
+                        <td>3명</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br><hr><br>
+            <!--
+                rowspan 과 colspan 알아보기
+
+                <td rowspan="합칠 셀의 개수">내용<td>
+                <td colspan="합칠 셀의 개수">내용<td>
+
+
+
+                    0   0   1   1   
+                    1   1   1   0
+                    1   1   1   1 
+                    1 합쳐진공간
+
+                -->
+
             <table>
-            <tr>    표의 행을 나타내는 태그
-            <th>    표의 제목 셀을 나타내는 태그
-            <td>    표의 일반셀
-    -->
-    <table border="1">
-        <caption><b>웹브라우저의 종류</b></caption>
-        <tr>
-            <th>브라우저명</th>
-            <th>제조사    </th>
-            <th>홈페이지</th>
-        </tr>
-        <tr>
-            <td>익스플로러</td>
-            <td>ms</td>
-            <td>https://www.microsoft.com</td>
-        </tr>
-        <tr>
-            <td>크롬</td>
-            <td>google</td>
-            <td>https://www.google.com</td>
-        </tr>
-        <tr>
-            <td>사파리</td>
-            <td>애플</td>
-            <td>https://www.apple.;com</td>
-        </tr>
+                <caption>rowspan test</caption>
+                <!--제목공간-->
+                <tr>
+                    <th>1열</th>
+                    <th>2열</th>
+                    <th>3열</th>
+                    <th>4열</th>
+                </tr>
+                <!-- 1행 0011-->
+                 <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td rowspan="3">1</td>
+                    <td>1</td>
+                </tr>
+                <!--
+                    2행 1,1,X,0
+                -->
+                    <td rowspan="2">0</td>
+                    <td rowspan="2">0</td>
+                    <td>0</td>
+                <tr>
+                    3행 X,X,X,1
+                    <td>1</td>
+                </tr>
+            </table><br><br><hr><br>
+            <!--
+                <col>과 <colgroup>
 
-    </table>
-
-    <hr>
-    <!--
-        <td> 속성이용, 행 열 합치기
-            colspan 열합치기
-            rowspan 행합치기
-    -->
-
-    <h1>표 열,행합치기</h1>
-    <!-- 회원정보를 합치기-->
-
-    <table border="1">
-        <tr>
-            <td width="130px" height="150px" colspan="2" rowspan="2">사진</td>
-            <td width="80px">이름</td>
-            <td width="200px"></td>
-        </tr>
-        <tr>
-            <td>연락처</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td width="70px" height="50px">주소</td>
-            <td colspan="3"></td>
-        </tr>
-        <tr>
-            <td height="100px">자기소개</td>
-            <td colspan="3"></td>
-        </tr>
-    </table>
-
-
-    <hr>
-    <h2>테이블 태그의 구조 설정</h2>
-    <table border="1">
-        <thead> <!--thead로 감싸기-->
-            <tr>
-            <th>이름</th>
-            <th>나이</th>
-            <th>주소</th>
-        </tr>
-        </thead>
-        <tbody><!--tbody로 감싸기-->
-            <tr>
-                <td>홍길동</td>
-                <td>20</td>
-                <td>서울시 서초구</td>
-            </tr>
-            <tr>
-                <td>김영희</td>
-                <td>24</td>
-                <td>서울시 강동구</td>
-            </tr>
-            <tr>
-                <td>이순신</td>
-                <td>30</td>
-                <td>경기도 남양주</td>
-            </tr>
-        </tbody>
-        <tfoot><!--tfoot로 감싸기-->
-            <tr>
-                <td colspan="2">총인원</td>
-                <td>3명</td>
-            </tr>
-        </tfoot>
-    </table>
-</body>
+                열을 통째로 쓸때 사용
+                caption 다음에 써야된다. 
+                스타일 속성을 지정한다면 없는 속성도 열을 명시해야함
+                -->
+            <table>
+                <caption>열을 활용</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col style="width:150px">
+                    <col style="width:150px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>용도</th>
+                        <th>중량</th>
+                        <th>개수</th>
+                        <th>가격</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table><br><hr><br>
+            <table>
+                <caption>열을 활용</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col span="2" style="width:150px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>용도</th>
+                        <th>중량</th>
+                        <th>개수</th>
+                        <th>가격</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table><br><hr><br>
+                    
+            
+            
+            
+            
+            
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
 </html>
