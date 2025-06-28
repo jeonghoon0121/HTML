@@ -1,68 +1,116 @@
 <!--
-2_목록관련태그
+5_이미지관련태그
 
 1수업시간 작성 20250623
-2
-3
+2책 코드 추가 20250627
+3소스 정리 20250628
+4주석, 설정 다시 정리 20250628
+5가변,고정 크기에 대한 설명 잘 나와있음 
+6.수정필요 20250628
 
 
+참고
+kd 수업
+HTML+CSS+자바스크립트 웹 표준의 정석
 
-
-JeongHoon 2025063
---><!DOCTYPE html>
+JeongHoon 20250623
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이미지관련태그</title>
+    <!--
+            <img> 태그는 이미지를 삽입할때 사용
+            기본형 <img src="이미지의 파일경로" alt="대체테스터">
+
+            <img> 태그의 속성
+                src ="경로"
+                    1. 웹문서 파일과 이미지가 같은 경로에 있다면 이미지파일의 이름만
+                    2. 웹문서 하위 폴더에 있을경우 
+                    images/tangerines.jpg
+                alt alt="대체텍스트"
+
+                width 가로길이
+                height 세로길이
+
+            가능 이미지 파일 형식
+            GIF, JPG, JPEG, PNG, WebP
+
+            <figure> 태그
+            <figcaption>태그
+            <srcset>태그
+    -->
 </head>
 <body>
-    <!--
+    <h1>이미지 관련 태그</h1>
+        <h3>이미지 기본 태그</h3>
+        <!--
+            <img> 태그는 이미지를 삽입할때 사용
+            기본형 <img src="이미지의 파일경로" alt="대체테스터">
+
+            <img> 태그의 속성
+                src ="경로"
+                    1. 웹문서 파일과 이미지가 같은 경로에 있다면 이미지파일의 이름만
+                    2. 웹문서 하위 폴더에 있을경우 
+                    images/tangerines.jpg
+                alt alt="대체텍스트"
+
+                width 가로길이
+                height 세로길이
+
+            가능 이미지 파일 형식
+            GIF, JPG, JPEG, PNG, WebP
+        -->
+        <!--
         <img/> 이미지삽입
             src 경로설정
             닫기태그 없음
+        -->
+        <img src="sample/image/river1.PNG">
+        <!-- 정확히 경로를 입력해라 -->
+        <p>이미지 파일 불러옴</p>
+
+        <br><hr><br>
+
+        <h2>자주 속성하는 속성들 </h2>
+            <h3>alt속성</h3>
+
+                <img src="samp1/image/river2.PNG" alt="river2의 사진">
+                <p>경로 실수, 이미지 표현 장애일 시 대체텍스트 사용</p>
+ 
+                <br>
+
+            <h3>width height속성</h3>
+                <p>사진의 위치, 너비 지정</p>
+                <p>고정크기 지정가능</p>
+                <p>가변크기 지정가능</p>
+                <br>
+                <ul>
+                    <li>사진의 위치, 너비 지정</li>
+                    <li>고정크기 지정가능</li>
+                    <li>가변크기 지정가능</li>
+                </ul>
+                <br>
+            <h4>고정크기단위 : 화면 사이즈가 줄어도 크기가 변하지 않음</h4>
+            <!--픽셀로 지정하여 웹페이지의 크기에 영향을 받지 않는다. -->
+                
+                <img src="sample/image/flower1.PNG" width="200px" height="150px">
+                <img src="sample/image/flower2.PNG" width="200px" height="150px">
+                <img src="sample/image/flower3.PNG" width="200px" height="150px">
+                <img src="sample/image/flower4.PNG" width="200px" height="150px">
+                <img src="sample/image/flower5.PNG" width="200px" height="150px">
+
+            <h4>가변 크기 단위 : 화면 사이즈 혹은 기준이 사이즈에 따라 변경됨</h4>
+            <!--퍼센트로 지정하여 웹페이지의 크기에 영향을 받지 않는다. -->
             
-    -->
+                <img src="sample/image/flower1.PNG" width="15%" height="150px">
+                <img src="sample/image/flower2.PNG" width="15%" height="150px">
+                <img src="sample/image/flower3.PNG" width="15%" height="150px">
+                <img src="sample/image/flower4.PNG" width="15%" height="150px">
+                <img src="sample/image/flower5.PNG" width="15%" height="150px">
 
-    <h1>이미지 관련 태그</h1>
-    <img src="sample/image/river1.PNG">
-    <!-- 정확히 경로를 입력해라 -->
-     <p>이미지 파일 불러옴</p>
-    <hr>
-    <h2>자주 속성하는 속성들 </h2>
-    <h3>alt속성</h3>
-    <p>경로 실수, 이미지 표현 장애일 시 대체텍스트 사용</p>
-    <img src="samp1/image/river2.PNG" alt="river2의 사진">
-    
-    <br>
-    <h3>width height속성</h3>
-    <p>사진의 위치, 너비 지정<br>
-    고정크기 지정가능<br>
-    가변크기 지정가능<br>
-            
-    </p>
-    <h4>고정크기단위 : 화면 사이즈가 줄어도 크기가 변하지 않음</h4>
-
-    <img src="sample/image/flower1.PNG" width="200px" height="150px">
-    <img src="sample/image/flower2.PNG" width="200px" height="150px">
-    <img src="sample/image/flower3.PNG" width="200px" height="150px">
-    <img src="sample/image/flower4.PNG" width="200px" height="150px">
-    <img src="sample/image/flower5.PNG" width="200px" height="150px">
-
-    <!--픽셀로 지정하여 웹페이지의 크기에 영향을 받지 않는다. -->
-
-    <h4>가변 크기 단위 : 화면 사이즈 혹은 기준이 사이즈에 따라 변경됨</h4>
-
-    <img src="sample/image/flower1.PNG" width="15%" height="150px">
-    <img src="sample/image/flower2.PNG" width="15%" height="150px">
-    <img src="sample/image/flower3.PNG" width="15%" height="150px">
-    <img src="sample/image/flower4.PNG" width="15%" height="150px">
-    <img src="sample/image/flower5.PNG" width="15%" height="150px">
-
-
-
-
-
-
+            <br><hr><br>
 </body>
 </html>
